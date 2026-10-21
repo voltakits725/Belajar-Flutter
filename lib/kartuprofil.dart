@@ -120,11 +120,152 @@ class LatihanCard extends StatelessWidget {
   }
 }
 
-class latihanListView extends StatelessWidget {
-  const latihanListView({super.key});
+
+
+class LatihanListView extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[100], // Warna latar belakang layar
+      appBar: AppBar(
+        title: const Text('Proyek Minggu 2: ListView'),
+        backgroundColor: Colors.blueAccent,
+        foregroundColor: Colors.white,
+      ),
+      // 1. LISTVIEW: Membungkus semua kartu agar bisa di-scroll
+      body: ListView(
+        padding: const EdgeInsets.all(20), // Memberi jarak agar tidak menempel ke tepi layar
+        children: [
+          
+          // ==========================================
+          // KARTU 1: KARTU PROFIL (Versi Simpel)
+          // ==========================================
+          Container(
+            padding: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: Colors.blue[100],
+              borderRadius: BorderRadius.circular(15),
+            ),
+            child: Column(
+              children: [
+                const Text(
+                  'Rafly',
+                  style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                ),
+                const Text(
+                  'Calon Fullstack Flutter Developer',
+                  style: TextStyle(fontSize: 16, color: Colors.blueGrey),
+                ),
+                const SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: const [
+                    Text('Semester: 5', style: TextStyle(fontWeight: FontWeight.bold)),
+                    SizedBox(width: 20),
+                    Text('Fokus: Mobile', style: TextStyle(fontWeight: FontWeight.bold)),
+                  ],
+                ),
+              ],
+            ),
+          ),
+
+          // Memberi jarak kosong antara Kartu 1 dan Kartu 2
+          const SizedBox(height: 30),
+
+          // ==========================================
+          // KARTU 2: KARTU STATUS REPOSITORY
+          // ==========================================
+          Container(
+            padding: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: Colors.blueGrey[900], // Background gelap sesuai desainmu
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start, // Rata kiri
+              children: [
+                const Text(
+                  'Day One',
+                  style: TextStyle(
+                    color: Colors.amber, // Warna kuning keemasan
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
+                const SizedBox(height: 5),
+                const Text(
+                  'Belajar Mobile Flutter',
+                  style: TextStyle(
+                    color: Colors.white70,
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Row(
+                  children: [
+                    // Icon tambahan yang tadi kita bahas
+                    const Icon(
+                      Icons.code, 
+                      color: Colors.white70,
+                      size: 20,
+                    ),
+                    const SizedBox(width: 8),
+                    const Text(
+                      'Github: ',
+                      style: TextStyle(color: Colors.redAccent, fontSize: 16),
+                    ),
+                    const Text(
+                      'Voltakits725',
+                      style: TextStyle(
+                        color: Colors.lightBlue, 
+                        fontSize: 16, 
+                        fontWeight: FontWeight.bold,
+                        fontStyle: FontStyle.italic,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class CardWidget extends StatelessWidget {
+  const CardWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Card(
+        elevation: 5, // Mengatur tebal bayangan (efek melayang 3D)
+        color: Colors.blue[50], // Warna latar belakang kartu
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15), // Mengatur lengkungan sudut
+        ),
+        // Karena Card ga punya fitur padding bawaan, kita tambahkan widget Padding di sini
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            children: [
+              const Text(
+                'Rafly',
+                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+              ),
+              const Text(
+                'Calon Fullstack Flutter Developer',
+                style: TextStyle(fontSize: 16, color: Colors.blueGrey),
+              ),
+            ],
+          ),
+        ),
+      )
+    );
   }
 }
