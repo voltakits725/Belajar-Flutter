@@ -1,3 +1,5 @@
+import 'package:belajar_flutter_part2/button.dart';
+import 'package:belajar_flutter_part2/form_input.dart';
 import 'package:belajar_flutter_part2/kartuprofil.dart';
 import 'package:belajar_flutter_part2/latihan_responsive.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LatihanResponsive(),
+      home: LatihanForm(),
       
     );
   }

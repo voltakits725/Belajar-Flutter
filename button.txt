@@ -1,0 +1,34 @@
+1. Scaffold (Si Kanvas Utama)Kalau lu mau melukis, Scaffold ini adalah kanvas kosong beserta bingkainya. Ini adalah fondasi dari setiap halaman aplikasi Flutter. Tanpa Scaffold, layar HP lu cuma akan hitam legam atau error.
+
+- Scaffold punya "slot-slot" khusus (properti) yang tinggal lu isi:   
+- appBar: Slot untuk navigasi/header di bagian atas.
+- body: Slot utama di tengah layar tempat lu menaruh konten (Container, ListView, dll).
+
+- floatingActionButton: Slot untuk tombol bulat yang melayang di pojok kanan    bawah (biasanya untuk aksi tambah data).
+
+- bottomNavigationBar: Slot untuk menu navigasi di bagian paling bawah layar.
+- drawer: Slot untuk menu samping (sidebar) yang bisa ditarik dari kiri layar.
+
+2. AppBar (Si Kepala Aplikasi)Ini adalah palang navigasi yang letaknya di pucuk layar. Sama seperti Scaffold, AppBar juga punya anatomi khusus dari kiri ke kanan:   
+
+- leading: Slot paling kiri. Biasanya otomatis terisi tombol "Back", tapi bisa lu ganti pakai icon profil atau tombol menu garis tiga (hamburger menu).
+
+- title: Bagian tengah untuk menampilkan teks judul halaman.
+
+- actions: Slot di sebelah kanan (berupa array/list). Biasanya diisi kumpulan tombol 
+
+- IconButton seperti icon notifikasi, search, atau setting.
+
+
+
+
+
+3. Button (Tombol Interaktif)Flutter punya banyak jenis tombol bawaan Material. Tiga yang paling sering dipakai dari yang paling mencolok sampai yang paling samar adalah:   
+
+- ElevatedButton: Tombol utama yang punya warna latar dan efek bayangan (shadow). Dipakai untuk aksi paling penting (misal: "Simpan", "Login").
+
+- OutlinedButton: Tombol transparan dengan garis pinggir. Dipakai untuk aksi sekunder (misal: "Batal", "Lewati").
+
+-TextButton: Hanya berupa teks yang bisa diklik tanpa bingkai dan tanpa latar. Dipakai untuk aksi pelengkap (misal: "Lupa Password?").
+
+-(Bonus) IconButton: Tombol yang isinya hanya icon tanpa teks.
