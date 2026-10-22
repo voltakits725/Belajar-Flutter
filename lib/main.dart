@@ -1,4 +1,5 @@
 import 'package:belajar_flutter_part2/kartuprofil.dart';
+import 'package:belajar_flutter_part2/latihan_responsive.dart';
 import 'package:flutter/material.dart';
 
 void main(){
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CardWidget(),
+      home: LatihanResponsive(),
       
     );
   }
@@ -54,6 +55,8 @@ class ContainerWidget extends StatelessWidget {
     );
   }
 }
+
+
 
 class RowAndColumn extends StatelessWidget {
   const RowAndColumn({super.key});

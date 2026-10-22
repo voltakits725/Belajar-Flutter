@@ -1,0 +1,14 @@
+1. Pakai MediaQuery Ketika:
+Lo butuh ukuran yang dihitung berdasarkan total dimensi layar HP secara keseluruhan, bukan berdasarkan kontainer di atasnya. 
+-  Kasus Nyata: Lo mau bikin tombol "Login" yang lebarnya persis 90% dari layar, entah itu dibuka di iPhone kecil atau tablet besar.
+- Kasus Lain: Lo mau mendeteksi apakah HP pengguna lagi mode portrait (berdiri) atau landscape (tiduran) untuk merombak tata letak UI.
+
+2. Pakai Expanded Ketika:
+Lo butuh suatu komponen bersifat rakus dan menempati semua sisa ruang kosong yang ada di dalam Row atau Column.
+
+- Kasus Nyata: Bikin kolom chat WhatsApp. Lo punya TextField buat ngetik dan tombol Icon panah buat ngirim di dalam satu Row. Tombol kirim ukurannya tetap, sedangkan TextField dibungkus Expanded biar melar mentok ke kiri dan ke kanan memakan sisa layar.
+- Kasus Lain: Membagi ruang sama rata. Kalau lo masukin dua Expanded ke dalam Row, mereka otomatis membagi lebar layar jadi 50:50.
+
+3. Pakai Flexible Ketika:
+Lo butuh komponen yang bisa mengalah supaya tidak terjadi error overflow (garis kuning hitam di layar), tapi lo tidak mau memaksanya melar kalau ruangannya masih lega.
+- Kasus Nyata: Menampilkan nama user panjang di sebelah avatar profil dalam satu Row. Kalau lo bungkus namanya pakai Flexible, saat namanya pendek ("Rafly"), teksnya tetap pendek. Tapi saat namanya panjang banget ("Rafly Calon Fullstack Flutter Developer"), teksnya akan otomatis turun ke baris baru (wrap text) menyesuaikan batas layar, bukannya menabrak pinggir layar dan error.
