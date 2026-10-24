@@ -2,6 +2,8 @@ import 'package:belajar_flutter_part2/button.dart';
 import 'package:belajar_flutter_part2/form_input.dart';
 import 'package:belajar_flutter_part2/kartuprofil.dart';
 import 'package:belajar_flutter_part2/latihan_responsive.dart';
+import 'package:belajar_flutter_part2/navigator.dart';
+import 'package:belajar_flutter_part2/todolist.dart';
 import 'package:flutter/material.dart';
 
 void main(){
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LatihanForm(),
+      home: HalamanUtama(),
       
     );
   }
